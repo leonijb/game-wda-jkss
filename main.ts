@@ -3,6 +3,11 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onButtonPressed(Button.AB, function () {
     shoot = game.createSprite(ship.get(LedSpriteProperty.X), ship.get(LedSpriteProperty.X))
+    for (let index = 0; index < 4; index++) {
+        shoot.change(LedSpriteProperty.Y, -1)
+        basic.pause(150)
+    }
+    shoot.delete()
 })
 input.onButtonPressed(Button.B, function () {
     ship.move(1)
